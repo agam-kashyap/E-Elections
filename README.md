@@ -25,7 +25,7 @@ pip install <library name>
 
 ## Using the application
 
-[For a visual Walkthrough Click Here](https://www.youtube.com/watch?v=R9_H8i2uNOg&feature=youtu.be)
+[For a visual Walkthrough Click Here](https://youtu.be/R9_H8i2uNOg)
 
 Visit the About page of the website or refer to the project report
 
