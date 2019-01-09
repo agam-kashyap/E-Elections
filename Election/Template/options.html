@@ -2,12 +2,18 @@
 {% block content %}
 <div>
 	<form method = "POST" action="">
-		
-	{% for i in num %}
-		<label class="radiobutton"><input type="radio" name = "options" value="one"><font size = "5"><strong>{{ users[i].username }}</strong></font>
+		<label class="radiobutton"><input type="radio" name = "options" value="one"><font size = "5"><strong>{{ users[0].username }}</strong></font>
 			<span class="checkmark"></span>
 		</label>
-		{% endfor %}
+		<label class="radiobutton"><input type="radio" name = "options" value="two"><font size = "5"><strong>{{ users[1].username }}</strong></font>
+			<span class="checkmark"></span>
+		</label>
+		<label class="radiobutton"><input type="radio" name = "options" value="three"><font size = "5"><strong>{{ users[2].username }}</strong></font>
+			<span class="checkmark"></span>
+		</label>
+		<label class="radiobutton"><input type="radio" name = "options" value="four"><font size = "5"><strong>{{ users[3].username }}</strong></font>
+			<span class="checkmark"></span>
+		</label>
 		<input type = "submit" value = "Submit" class = "submit">
 	</form>
 	<a href = "/presidentchoose"><button class = "simplebutton"><span><i class="fa fa-close"> Cancel </i></span></button></a>
