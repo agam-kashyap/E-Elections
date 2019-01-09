@@ -31,5 +31,6 @@ Visit the About page of the website or refer to the project report
 
 ## Built With
 
+* [Python](https://www.python.org/)
 * [Flask](http://flask.pocoo.org/) - The web framework used
 * [Sqlite](https://www.sqlite.org/index.html) - Database Management System
