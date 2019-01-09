@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+	<h1>Your vote has been counted. Please proceed to the result page to view the result:</h1>
+	<a href = "/results"><button class = "button"><span><i class="fa fa-bar-chart-o"> Results</i></span></button></a>
+	<h1> Or vote for a different category:</h1>
+	<a href="/categories"><button class = "button"><span><i class="fa fa-list-ul"> Categories</i></span></button></a>
+	</div>
+{% endblock %}

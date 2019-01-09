@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+	<form method ="POST" action"">
+		{{ form.hidden_tag() }}
+		<fieldset>
+			<legend><font size="30"><strong style = "color:floralwhite">Login</strong></font></legend>
+			<div>
+				<div>
+				<strong  style = "color:floralwhite">{{ form.username.label }}</strong>
+				    <br>
+				    {% if form.username.errors %}
+				    {{ form.username }}
+				    <div>
+				    {% for error in form.username.errors%}
+				    <span  style = "color: #EE6309"><em>{{error}}</em></span>
+				    {% endfor %}
+				    </div>
+				    {% else %}
+				    {{ form.username }}
+		          	{% endif %}
+			    </div>
+		        <div>
+					<strong  style = "color:floralwhite">{{ form.password.label }}</strong>
+					<br>
+					{% if form.password.errors %}
+					{{ form.password }}
+					<div>
+						{% for error in form.password.errors%}
+						<span style = "color: #EE6309"><em>{{error}}</em></span>
+						{% endfor %}
+					</div>
+					{% else %}
+					{{ form.password }}
+					{% endif %}					
+				</div>
+			</div>
+		</fieldset>
+		<div>
+	  	{{ form.submit(class = "submit") }}
+	  </div>
+	</form>
+</div>
+{% endblock %}

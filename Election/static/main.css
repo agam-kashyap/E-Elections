@@ -1,0 +1,225 @@
+body{
+	    /*padding-top: 0px;*/
+      margin :0;
+      padding-bottom: 40px;
+    }
+    /* position: fixed; */
+    .fixed-header, .fixed-footer{
+        width: 100%;
+        background: #011716;
+        padding: 40px 0;
+        color: #fff;
+    }
+    .fixed-header{
+        top: 0;
+    }
+    .fixed-footer{
+        bottom: 0;
+    }
+    .button {
+	  	border-radius: 10px;
+	  	background-color: #f4511e;
+	  	border: none;
+	  	color: #FFFFFF;
+	  	text-align: center;
+	  	font-size: 28px;
+	  	padding: 20px;
+	  	width: 340px;
+	  	transition: all 0.5s;
+	  	cursor: pointer;
+	  	margin: 5px;
+	}
+
+	.button span {
+	  	cursor: pointer;
+	  	display: inline-block;
+	  	position: relative;
+	  	transition: 0.5s;
+	}
+
+	.button span:after {
+		content: '\00bb';
+		position: absolute;
+		opacity: 0;
+		top: 0;
+		right: -20px;
+		transition: 0.5s;
+	}
+
+	.button:hover span {
+	  	padding-right: 25px;
+	}
+
+	.button:hover span:after {
+		opacity: 1;
+		right: 0;
+	}
+
+	/*.container{
+        width: 80%;
+        margin: 0 auto; 
+    }*/
+    .submit {
+          background-color: #ddd;
+          border: none;
+          color: black;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          margin: 4px 2px;
+          cursor: pointer;
+          border-radius: 16px;
+        }
+
+        .submit:hover {
+          background-color: #f1f1f1;
+        }
+  .radiobutton {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .radiobutton input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+  .radiobutton:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .radiobutton input:checked ~ .checkmark {
+    background-color: #2196F3;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  .radiobutton input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .radiobutton .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    background-color: #1DE6DD;
+    border-radius: 25px;
+  }
+  .Infocard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  .title {
+    color: grey;
+    font-size: 18px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+  }
+  /************************************************/
+    .backbutton {
+      border-radius: 10px;
+      background-color: #f4511e;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 28px;
+      padding: 20px;
+      width: 200px;
+      transition: all 0.5s;
+      cursor: pointer;
+      margin: 5px;
+  }
+
+  .backbutton span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+  }
+
+  .backbutton span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -90px;
+    transition: 1s;
+  }
+
+  .backbutton:hover span {
+      padding-left: 25px;
+  }
+
+  .backbutton:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+  .textarea {
+    min-width: : 1000px;
+  }
+  form textarea#info {
+     width: 500px;
+     height: 100px;
+}
+.simplebutton {
+  padding: 10px 10px;
+  font-size: 17px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #f4511e;
+  border: none;
+  border-radius: 15px;
+ 
+}
+
+.simplebutton:hover {background-color: #F28968}
+
+.simplebutton:active {
+  background-color: #F28968;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

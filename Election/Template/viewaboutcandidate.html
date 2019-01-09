@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+	<article>
+		<div class="Infocard">
+		  <h3>{{ user.username }}</h3>
+		  <p class="title">About me</p>
+		  <p>{{ infos.info }}</p>
+		  <div style="margin: 24px 0;"> 
+		    <a href={{ infos.facebook }}><i class="fa fa-facebook"></i></a>
+		    <a href={{ infos.github }}><i class="fa fa-github"></i></a> 
+		  </div>
+		</div>
+	</article>
+	<a href="/results"><button class = "button"><span><i class="fa fa-bar-chart-o"> Results</i></span></button></a>
+	<a href = "/candidateupdateinfo"><button class = "button"><span><i class="fa fa-arrow-circle-o-up"> Update </i></span></button></a>
+</div>
+{% endblock %}

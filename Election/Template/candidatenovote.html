@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+	<h1>As a candidate you do not have the permission to vote. Please proceed to the result page to view the result:</h1>
+	<a href = "/results"><button class = "button"><span><i class="fa fa-bar-chart-o"> Results</i></span></button></a>
+	<h1>Or modify your info:<h1>
+	<a href = "/candidateupdateinfo"><button class = "button"><span><i class="fa fa-arrow-circle-o-up"> Update</i></span></button></a>	
+	</div>
+{% endblock %}

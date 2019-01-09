@@ -1,0 +1,57 @@
+{%extends "layout.html"%}
+{% block content%}
+<div>
+	<form method = "POST" action="">
+		{{ form.hidden_tag() }}
+		<fieldset>
+			<legend><font size="30"><strong style = "color:floralwhite">Update</strong></font></legend>
+			<div>
+				<strong  style = "color:floralwhite">{{ form.info.label }}</strong>
+				    <br>
+				    {% if form.info.errors %}
+				    	{{ form.info }}
+					    <div>
+					    {% for error in form.info.errors%}
+					    <span  style = "color: #EE6309"><em>{{error}}</em></span>
+					    {% endfor %}
+					    </div>
+				    {% else %}
+				    	{{ form.info }}
+		          	{% endif %}
+			</div>
+			<div>
+				<strong  style = "color:floralwhite">{{ form.facebook.label }}</strong>
+				    <br>
+				    {% if form.facebook.errors %}
+				    	{{ form.facebook }}
+					    <div>
+					    {% for error in form.facebook.errors%}
+					    <span  style = "color: #EE6309"><em>{{error}}</em></span>
+					    {% endfor %}
+					    </div>
+				    {% else %}
+				    	{{ form.facebook }}
+		          	{% endif %}
+			</div>
+			<div>
+				<strong  style = "color:floralwhite">{{ form.github.label }}</strong>
+				    <br>
+				    {% if form.github.errors %}
+				    	{{ form.github }}
+					    <div>
+					    {% for error in form.github.errors%}
+					    <span  style = "color: #EE6309"><em>{{error}}</em></span>
+					    {% endfor %}
+					    </div>
+				    {% else %}
+				    	{{ form.github }}
+		          	{% endif %}
+			</div>
+		</fieldset>
+		<div >
+	  	{{ form.submit(class = "submit") }}
+	  	</div>
+	</form>
+	<a href = "/viewaboutcandidate"><button class = "simplebutton"><span><i class="fa fa-close"> Cancel </i></span></button></a>
+</div>
+{% endblock %}

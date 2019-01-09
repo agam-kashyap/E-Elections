@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+	{% for i in num %}
+		<article>
+			<div class="Infocard">
+			  <h3>{{ users[i].username }}</h3>
+			  <p class="title">About me</p>
+			  <p>{{ infos[i].info }}</p>
+			  <div style="margin: 24px 0;"> 
+			    <a href={{ infos[i].facebook }}><i class="fa fa-facebook"></i></a>
+			    <a href={{ infos[i].github }}><i class="fa fa-github"></i></a> 
+			  </div>
+			</div>
+		</article>
+		{% endfor %}
+		<a href = "/presidentchoose"><button class = "backbutton"><span><i class="fa fa-step-backward"> Back </i></span></button></a>
+</div>
+{% endblock %}

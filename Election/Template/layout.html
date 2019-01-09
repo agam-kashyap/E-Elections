@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    {% if title %}
+        <title>Election - {{ title }}</title>
+    {% else %}
+        <title>Election</title>
+    {% endif %}
+    <link rel="icon" type="image/ico" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTykappDYFF4PrH9lappsQVPN-4S3P6YrBNmnCZwNI_yxb7KHmw" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+<body style = "background-color: #1DE6DD">
+    <header>
+      	<div class = "fixed-header">
+	  	<nav>
+	      <a href="/" class="button" ><span style="color:white;font-weight:bold"><i class="fa fa-home"> Home</span></i></a> 
+	      <a href="/about" class = "button"><span style="color:white;font-weight:bold"><i class="fa fa-university"> About</i></span></a>
+          <a href="/register" class = "button"><span style="color:white;font-weight:bold"><i class="fa fa-child"> Register</i></span></a>
+          {% if current_user.is_authenticated %}
+              <a href="/categories" class = "button"><span style="color:white;font-weight:bold"><i class="fa fa-list-ul"> Categories</i></span></a>
+              {% if current_user.key !=0 %}
+              <a href="/viewaboutcandidate" class = "button"><span style="color:white;font-weight:bold"><i class="fa fa-address-book"> Info </i></span></a>
+             {% endif %}  
+              <a href="/logout" class = "button"><span style="color:white;font-weight:bold"><i class="fa fa-sign-out"> Logout</i></span></a>
+              
+          {% else %}
+    	      <a href="/login" class = "button"><span style="color:white;font-weight:bold"><i class="fa fa-sign-in"> Login</span></i></a>
+            {% endif %}
+          </nav>
+        </div>
+    </header>
+    <br>
+    <main role = "main">
+    	<div class = "container">
+    		{% with messages = get_flashed_messages(with_categories=true) %}
+              {% if messages %}
+                {% for category,message in messages %}
+                  <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+    	  {% block content %}{% endblock %}
+    	</div>
+    </main>
+</body>
+</html>

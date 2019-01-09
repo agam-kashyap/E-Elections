@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+	<form method="POST" action = "">
+		{{ form.hidden_tag() }}
+		<fieldset>
+			<legend><font size="30"><strong style = "color:floralwhite">Register</strong></font></legend>
+        <div>
+			    <strong style = "color:floralwhite">{{ form.username.label }}</strong>
+					<br>
+					{% if form.username.errors %}
+						{{ form.username }}
+					<div>
+						{% for error in form.username.errors%}
+							<span style = "color: #EE6309"><em>{{error}}</em></span>
+				 		{% endfor %}
+					</div>
+					{% else %}
+						{{ form.username }}
+	        {% endif %}
+	    	</div>
+	    	<div>
+			    <strong style = "color:floralwhite">{{ form.password.label }}</strong>
+					<br>
+					{% if form.password.errors %}
+						{{ form.password }}
+					<div>
+						{% for error in form.password.errors%}
+							<span style = "color: #EE6309"><em>{{error}}</em></span>
+				 		{% endfor %}
+					</div>
+					{% else %}
+						{{ form.password }}
+	        {% endif %}
+	    	</div>
+	    	<div>
+			    <strong style = "color:floralwhite">{{ form.confirmpassword.label }}</strong>
+					<br>
+					{% if form.confirmpassword.errors %}
+						{{ form.confirmpassword }}
+					<div>
+						{% for error in form.confirmpassword.errors%}
+							<span style = "color: #EE6309"><em>{{error}}</em></span>
+				 		{% endfor %}
+					</div>
+					{% else %}
+						{{ form.confirmpassword }}
+	        {% endif %}
+	    	</div>
+	    	<div>
+			    <strong style = "color:floralwhite">{{ form.secretid.label }}</strong>
+					<br>
+					{% if form.secretid.errors %}
+						{{ form.secretid }}
+					<div>
+						{% for error in form.secretid.errors%}
+							<span style = "color: #EE6309"><em>{{error}}</em></span>
+				 		{% endfor %}
+					</div>
+					{% else %}
+						{{ form.secretid }}
+	        {% endif %}
+	    	</div>
+		</fieldset>
+		<div>
+	  	{{ form.submit(class = "submit") }}
+	  </div>
+	</form>
+	<a href = "/home"><button class = "button"><span><i class="fa fa-home"> Home &raquo;</i></span></button></a>
+</div>
+{% endblock %}

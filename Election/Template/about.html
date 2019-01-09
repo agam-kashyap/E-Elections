@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block content %}
+<style>
+	table, th, td {
+    	border: 1px solid black;
+		border-collapse: collapse;
+	}
+	th,td {
+		padding: 25px;
+	}
+	table{
+		border-spacing: 15px;
+	}
+	table td:nth-child(even) {
+	    background-color: #eee;
+	}
+	table td:nth-child(odd) {
+	   background-color: #fff;
+	}
+	table th {
+	    background-color: black;
+	    color: white;
+	}
+	</style>
+<div>
+	</div>
+	<table style ="width:100%">
+    <td>
+    <h1> About </h1>	
+    <div>
+	    <p><h3>This website is for conducting elections. People waste a lot of time waiting in lines to vote. With this website, your problems have been <strong>solved!</strong> 
+	    </p><p>Users can use the username and password provided to them to login and cast the vote. </p>
+	    <p>Managers can use the secret id provided to them to add new voters. The results of the vote can be seen <strong><a href = "/results">&raquo;here&laquo;</a>.</h3></strong></p>
+	    <p><h3>Candidates can login with the username , password and the key provided to add information about themselves which will be shown to the users.</h3></p>
+	    <p><h3>Candidates can add and update information about them and links to their social profile pages. </h3></p>
+	</div>
+	<td>
+</table>
+	<div class="content-section">
+		<h2 style="text-align:center">Made By</h2>
+		<div class="card">
+		  <img src="https://scontent.fbom19-2.fna.fbcdn.net/v/t1.0-9/46492260_1776551075804739_4627160695400562688_n.jpg?_nc_cat=106&_nc_ht=scontent.fbom19-2.fna&oh=98251180af5acad32793c7db802c2879&oe=5C909C82" alt="Agam" style="width:100%" />
+		  	<h1>Agam Kashyap</h1>
+		  	<p class="title">IMT2018004</p>
+		  	<p>International Institute of Information Technology</p>
+		  	<div style="margin: 24px 0;"> 
+		    	<a href="https://www.facebook.com/agam.sasluck"><i class="fa fa-facebook"></i></a>
+		    	<a href="https://github.com/agam-kashyap"><i class="fa fa-github"></i></a> 
+		  	</div>
+		</div>
+	</div>
+</div>
+{% endblock %}
