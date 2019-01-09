@@ -25,6 +25,8 @@ pip install <library name>
 
 ## Using the application
 
+[For a visual Walkthrough Click Here](https://photos.app.goo.gl/7hcDRLwW2inirHQC7)
+
 Visit the About page of the website or refer to the project report
 
 ## Built With
