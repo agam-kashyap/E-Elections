@@ -1,5 +1,5 @@
 # E-Elections
-A web application created using flask and python3 which enables voters to submit their votes online. 
+A web application created using flask and python3 which enables voters to submit their votes online. The voters can view information about the candidates. The candidates can login and modify the information about themselves. Finally the results can be seen in the form of a pie chart. 
 
 ## Running Project
 Activate the virtual environment
