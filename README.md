@@ -1,2 +1,33 @@
 # E-Elections
-A web-app created using flask and python3 which enables voters to submit their votes online. 
+A web application created using flask and python3 which enables voters to submit their votes online. 
+
+## Running Project
+Activate the virtual environment
+```
+cd venv/bin
+source activate
+```
+Then use the command:
+```
+python run.py
+```
+On a web browser open the following link:
+
+[Election](http://localhost:8080/)
+
+### If errors faced
+
+I have included the venv file but still if an error pops up saying that the given library isn't installed it can be installed by using 
+
+```
+pip install <library name>
+```
+
+## Using the application
+
+Visit the About page of the website or refer to the project report
+
+## Built With
+
+* [Flask](http://flask.pocoo.org/) - The web framework used
+* [Sqlite](https://www.sqlite.org/index.html) - Database Management System
